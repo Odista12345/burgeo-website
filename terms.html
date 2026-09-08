@@ -5,40 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service - Burgeo</title>
   <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #333; background: #F5F7FA; }
-    h1 { color: #4A90D9; }
-    h2 { color: #1A1A2E; margin-top: 30px; }
-    a { color: #4A90D9; }
-    .nav { text-align: center; margin-bottom: 30px; }
-    .nav a { margin: 0 10px; text-decoration: none; color: #4A90D9; font-weight: 600; }
+    :root {
+      --bg: #0F1724;
+      --card: #1A2634;
+      --text: #FFFFFF;
+      --subtext: #8A94A6;
+      --primary: #4A90D9;
+      --border: #2A3442;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(15, 23, 36, 0.95);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--subtext);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+    .nav-links a.active { color: var(--primary); font-weight: 700; }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 30px 80px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .page-header .icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .page-header h1 {
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .page-header .updated {
+      color: var(--subtext);
+      font-size: 14px;
+    }
+
+    .section {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .section h2 {
+      color: var(--primary);
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      color: var(--subtext);
+      font-size: 15px;
+    }
+
+    .contact-box {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact-box a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--subtext);
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 15px 20px; flex-direction: column; gap: 10px; }
+      .container { padding: 40px 20px 60px; }
+      .page-header h1 { font-size: 28px; }
+    }
   </style>
 </head>
 <body>
-  <div class="nav">
-    <a href="https://burgeolabs.org">Home</a>
-    <a href="https://burgeolabs.org/privacy.html">Privacy</a>
-    <a href="https://burgeolabs.org/terms.html">Terms</a>
+
+  <nav>
+    <span style="font-size:24px;font-weight:800;letter-spacing:2px;color:#fff;">🛡️ BUR<span style="color:#4A90D9;">GEO</span></span>
+    <div class="nav-links">
+      <a href="https://burgeolabs.org">Home</a>
+      <a href="https://burgeolabs.org/privacy.html">Privacy</a>
+      <a href="https://burgeolabs.org/terms.html" class="active">Terms</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="page-header">
+      <div class="icon">📝</div>
+      <h1>Terms of Service</h1>
+      <p class="updated">Last Updated: September 2026</p>
+    </div>
+
+    <div class="section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By using Burgeo, you agree to these Terms of Service.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Description of Service</h2>
+      <p>Burgeo is a digital parenting platform that helps parents monitor screen time, set device usage rules, and promote healthy digital habits for children.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. Parental Responsibility</h2>
+      <p>Parents are solely responsible for how they use monitoring features. Parents must be the legal guardian of children they monitor.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. Account Security</h2>
+      <p>Parents must maintain the confidentiality of their login credentials and are responsible for all activity under their account.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Subscription & Billing</h2>
+      <p>Premium features require a paid subscription. Subscriptions auto-renew unless cancelled. Refunds are handled per app store policies.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Disclaimer of Warranties</h2>
+      <p>The Services are provided "as is" without warranties of any kind. We do not guarantee uninterrupted service or prevention of all digital risks.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Burgeo shall not be liable for indirect, incidental, or consequential damages.</p>
+    </div>
+
+    <div class="contact-box">
+      <p>Questions? Contact us at <a href="mailto:support@burgeolabs.org">support@burgeolabs.org</a></p>
+    </div>
   </div>
 
-  <h1>Burgeo Terms of Service</h1>
-  <p><strong>Last Updated:</strong> September 2026</p>
+  <footer>
+    © 2026 Burgeo Labs. All rights reserved. Helping children grow safely in a digital world.
+  </footer>
 
-  <h2>1. Acceptance of Terms</h2>
-  <p>By using Burgeo, you agree to these Terms of Service.</p>
-
-  <h2>2. Description of Service</h2>
-  <p>Burgeo is a digital parenting platform that helps parents monitor screen time, set device usage rules, and promote healthy digital habits.</p>
-
-  <h2>3. Parental Responsibility</h2>
-  <p>Parents are solely responsible for how they use monitoring features and must be the legal guardian of children they monitor.</p>
-
-  <h2>4. Subscription</h2>
-  <p>Premium features require a paid subscription. Subscriptions auto-renew unless cancelled.</p>
-
-  <h2>5. Disclaimer</h2>
-  <p>The Services are provided "as is" without warranties of any kind.</p>
-
-  <h2>6. Contact</h2>
-  <p>Email: <a href="mailto:support@burgeolabs.org">support@burgeolabs.org</a></p>
 </body>
 </html>
