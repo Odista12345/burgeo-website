@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burgeo - Helping Children Grow Safely in a Digital World</title>
-  <meta name="description" content="Burgeo is a digital parenting platform that helps parents monitor screen time, set device limits, and promote healthy digital habits for children.">
+  <meta name="description" content="Burgeo is a digital parenting platform that helps parents monitor screen time, set device limits, and promote healthy digital habits.">
   <style>
     :root {
       --bg: #0F1724;
@@ -26,7 +26,6 @@
       line-height: 1.6;
     }
 
-    /* Navigation */
     nav {
       display: flex;
       justify-content: space-between;
@@ -39,43 +38,33 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .logo {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
+    .logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 
-    .logo span { color: var(--primary); }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-    }
+    .nav-links { display: flex; gap: 25px; align-items: center; }
 
     .nav-links a {
-      color: var(--subtext);
+      color: var(--text);
       text-decoration: none;
       font-size: 14px;
+      font-weight: 500;
       transition: color 0.3s;
     }
 
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: var(--primary); }
 
     .nav-cta {
       background: var(--primary);
-      color: #fff;
-      padding: 10px 20px;
+      color: #FFFFFF !important;
+      padding: 10px 22px;
       border-radius: 20px;
       text-decoration: none;
       font-size: 14px;
-      font-weight: 600;
-      transition: background 0.3s;
+      font-weight: 700;
+      letter-spacing: 0.3px;
     }
 
     .nav-cta:hover { background: #3a7bc8; }
 
-    /* Hero */
     .hero {
       text-align: center;
       padding: 80px 20px 60px;
@@ -121,12 +110,13 @@
 
     .btn-primary {
       background: var(--primary);
-      color: #fff;
+      color: #FFFFFF;
       padding: 16px 32px;
       border-radius: 30px;
       text-decoration: none;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 800;
+      letter-spacing: 0.5px;
       transition: background 0.3s;
     }
 
@@ -141,13 +131,9 @@
       font-size: 16px;
       font-weight: 600;
       border: 1px solid var(--border);
-      transition: border-color 0.3s;
     }
 
-    .btn-secondary:hover { border-color: var(--primary); }
-
-    /* Features */
-    .features {
+    .features, .pricing, .how-it-works, .faq {
       padding: 60px 40px;
       max-width: 1000px;
       margin: 0 auto;
@@ -185,28 +171,9 @@
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
 
-    .feature-icon {
-      font-size: 40px;
-      margin-bottom: 15px;
-    }
-
-    .feature-card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    .feature-card p {
-      color: var(--subtext);
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* How It Works */
-    .how-it-works {
-      padding: 60px 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+    .feature-icon { font-size: 40px; margin-bottom: 15px; }
+    .feature-card h3 { font-size: 20px; margin-bottom: 10px; }
+    .feature-card p { color: var(--subtext); font-size: 14px; line-height: 1.6; }
 
     .steps {
       display: grid;
@@ -215,9 +182,7 @@
       margin-top: 40px;
     }
 
-    .step {
-      text-align: center;
-    }
+    .step { text-align: center; }
 
     .step-number {
       width: 60px;
@@ -233,22 +198,8 @@
       margin: 0 auto 15px;
     }
 
-    .step h3 {
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: var(--subtext);
-      font-size: 14px;
-    }
-
-    /* Pricing */
-    .pricing {
-      padding: 60px 40px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+    .step h3 { font-size: 18px; margin-bottom: 8px; }
+    .step p { color: var(--subtext); font-size: 14px; }
 
     .pricing-grid {
       display: grid;
@@ -262,14 +213,9 @@
       border-radius: 20px;
       padding: 35px;
       position: relative;
-      transition: transform 0.3s;
     }
 
-    .pricing-card:hover { transform: translateY(-5px); }
-
-    .pricing-card.popular {
-      border: 2px solid var(--primary);
-    }
+    .pricing-card.popular { border: 2px solid var(--primary); }
 
     .popular-badge {
       position: absolute;
@@ -281,48 +227,18 @@
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 1px;
+      color: #fff;
     }
 
-    .pricing-card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
+    .pricing-card h3 { font-size: 20px; margin-bottom: 10px; }
+    .price { font-size: 36px; font-weight: 800; margin-bottom: 5px; }
+    .price span { font-size: 14px; color: var(--subtext); font-weight: 400; }
 
-    .price {
-      font-size: 36px;
-      font-weight: 800;
-      margin-bottom: 5px;
-    }
+    .pricing-features { list-style: none; margin: 20px 0; }
+    .pricing-features li { margin-bottom: 10px; color: var(--subtext); font-size: 14px; }
+    .pricing-features li::before { content: '✓ '; color: var(--accent); font-weight: 700; }
 
-    .price span {
-      font-size: 14px;
-      color: var(--subtext);
-      font-weight: 400;
-    }
-
-    .pricing-features {
-      list-style: none;
-      margin: 20px 0;
-    }
-
-    .pricing-features li {
-      margin-bottom: 10px;
-      color: var(--subtext);
-      font-size: 14px;
-    }
-
-    .pricing-features li::before {
-      content: '✓ ';
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    /* FAQ */
-    .faq {
-      padding: 60px 40px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+    .btn-block { display: block; text-align: center; }
 
     .faq-item {
       background: var(--card);
@@ -332,23 +248,10 @@
       cursor: pointer;
     }
 
-    .faq-item h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
+    .faq-item h3 { font-size: 16px; }
+    .faq-item p { color: var(--subtext); font-size: 14px; display: none; }
+    .faq-item.active p { display: block; margin-top: 10px; }
 
-    .faq-item p {
-      color: var(--subtext);
-      font-size: 14px;
-      display: none;
-    }
-
-    .faq-item.active p {
-      display: block;
-      margin-top: 10px;
-    }
-
-    /* Footer */
     footer {
       background: var(--card);
       padding: 40px;
@@ -364,20 +267,10 @@
       flex-wrap: wrap;
     }
 
-    .footer-links a {
-      color: var(--subtext);
-      text-decoration: none;
-      font-size: 13px;
-    }
-
+    .footer-links a { color: var(--subtext); text-decoration: none; font-size: 13px; }
     .footer-links a:hover { color: var(--text); }
+    .footer-text { color: var(--subtext); font-size: 12px; }
 
-    .footer-text {
-      color: var(--subtext);
-      font-size: 12px;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
       nav { padding: 15px 20px; flex-direction: column; gap: 15px; }
       .nav-links { flex-wrap: wrap; justify-content: center; gap: 15px; }
@@ -389,19 +282,21 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
-    <div class="logo">🛡️ BUR<span>GEO</span></div>
+    <a href="https://burgeolabs.org" class="logo-link">
+      <img src="logo.png" alt="Burgeo" style="height:40px;width:auto;border-radius:8px;">
+      <span style="font-size:24px;font-weight:800;letter-spacing:2px;color:#fff;">BUR<span style="color:#4A90D9;">GEO</span></span>
+    </a>
     <div class="nav-links">
+      <a href="https://burgeolabs.org">Home</a>
       <a href="#features">Features</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#pricing">Pricing</a>
-      <a href="https://burgeolabs.org/privacy">Privacy</a>
-      <a href="#contact" class="nav-cta">Get Started</a>
+      <a href="https://burgeolabs.org/privacy.html">Privacy</a>
+      <a href="#pricing" class="nav-cta">Get Started</a>
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="hero">
     <div class="hero-badge">🛡️ Digital Parenting Platform</div>
     <h1>Helping Children Grow Safely in a <span>Digital World</span></h1>
@@ -412,7 +307,6 @@
     </div>
   </section>
 
-  <!-- Features -->
   <section class="features" id="features">
     <h2 class="section-title">Everything You Need</h2>
     <p class="section-subtitle">Powerful tools to keep your family safe and balanced</p>
@@ -420,37 +314,36 @@
       <div class="feature-card">
         <div class="feature-icon">⏱️</div>
         <h3>Screen Time Control</h3>
-        <p>Set daily limits, bedtime schedules, and per-app restrictions. Your child's device locks automatically when limits are reached.</p>
+        <p>Set daily limits, bedtime schedules, and per-app restrictions. Your child's device locks automatically.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📊</div>
         <h3>Usage Analytics</h3>
-        <p>See exactly how your child spends their device time. Track social media, gaming, and learning activity with detailed weekly reports.</p>
+        <p>See exactly how your child spends device time. Track social media, gaming, and learning with weekly reports.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🙆‍♂️</div>
         <h3>Wellness Breaks</h3>
-        <p>Automatic stretch and eye-rest breaks every 30 minutes. Your child develops healthy device habits naturally.</p>
+        <p>Automatic stretch and eye-rest breaks every 30 minutes for healthy device habits.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🤖</div>
         <h3>AI Parenting Assistant</h3>
-        <p>Get personalized recommendations based on your child's actual usage patterns. Smart advice, customized for your family.</p>
+        <p>Personalized recommendations based on your child's actual usage patterns.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">🔐</div>
         <h3>Privacy-First Design</h3>
-        <p>Your family data stays on your device. We never sell your data. Only essential account info touches our servers.</p>
+        <p>Your family data stays on your device. We never sell your data.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">📱</div>
         <h3>Works Everywhere</h3>
-        <p>Parent app and child app work together seamlessly. Set rules from your phone, enforced on your child's device instantly.</p>
+        <p>Parent app and child app work together seamlessly on Android devices.</p>
       </div>
     </div>
   </section>
 
-  <!-- How It Works -->
   <section class="how-it-works" id="how-it-works">
     <h2 class="section-title">How It Works</h2>
     <p class="section-subtitle">Get started in minutes</p>
@@ -473,7 +366,6 @@
     </div>
   </section>
 
-  <!-- Pricing -->
   <section class="pricing" id="pricing">
     <h2 class="section-title">Simple Pricing</h2>
     <p class="section-subtitle">Start free, upgrade when you need more</p>
@@ -487,7 +379,7 @@
           <li>Device pairing</li>
           <li>7-day usage history</li>
         </ul>
-        <a href="#" class="btn-primary" style="display:block;text-align:center;">Get Started</a>
+        <a href="#contact" class="btn-primary btn-block">Get Started</a>
       </div>
       <div class="pricing-card popular">
         <div class="popular-badge">MOST POPULAR</div>
@@ -502,7 +394,7 @@
           <li>Wellness breaks</li>
           <li>Weekly reports</li>
         </ul>
-        <a href="#" class="btn-primary" style="display:block;text-align:center;">Choose Basic</a>
+        <a href="#contact" class="btn-primary btn-block">Choose Basic</a>
       </div>
       <div class="pricing-card">
         <h3>Premium</h3>
@@ -517,13 +409,12 @@
           <li>Multiple parents</li>
           <li>Education Hub</li>
         </ul>
-        <a href="#" class="btn-primary" style="display:block;text-align:center;">Choose Premium</a>
+        <a href="#contact" class="btn-primary btn-block">Choose Premium</a>
       </div>
     </div>
     <p style="text-align:center;color:var(--subtext);font-size:13px;margin-top:20px;">Prices in Kenyan Shillings. Global pricing in USD available in-app.</p>
   </section>
 
-  <!-- FAQ -->
   <section class="faq" id="faq">
     <h2 class="section-title">Frequently Asked Questions</h2>
     <div class="faq-item" onclick="this.classList.toggle('active')">
@@ -532,11 +423,11 @@
     </div>
     <div class="faq-item" onclick="this.classList.toggle('active')">
       <h3>Can I set different rules for each child?</h3>
-      <p>Yes! Each child has their own profile with individual screen time limits, bedtime schedules, and wellness break settings.</p>
+      <p>Yes! Each child has their own profile with individual limits and schedules.</p>
     </div>
     <div class="faq-item" onclick="this.classList.toggle('active')">
       <h3>Is my family data private?</h3>
-      <p>Absolutely. Your data stays on your device. We only store essential account and payment information on our servers.</p>
+      <p>Absolutely. Your data stays on your device. We only store essential account info.</p>
     </div>
     <div class="faq-item" onclick="this.classList.toggle('active')">
       <h3>What devices are supported?</h3>
@@ -544,11 +435,10 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer id="contact">
     <div class="footer-links">
-      <a href="https://burgeolabs.org/privacy">Privacy Policy</a>
-      <a href="https://burgeolabs.org/terms">Terms of Service</a>
+      <a href="https://burgeolabs.org/privacy.html">Privacy Policy</a>
+      <a href="https://burgeolabs.org/terms.html">Terms of Service</a>
       <a href="mailto:support@burgeolabs.org">Contact Us</a>
       <a href="#pricing">Pricing</a>
     </div>
